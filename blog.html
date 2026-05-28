@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="bpaas-design-system" content="brutalist-avantgarde">
+<meta name="bpaas-design-theme" content="kr-neon-void">
+<title>블로그 - 강남 셔츠룸 서버 웜업</title>
+<style>
+:root {
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #12121c;
+  --text-primary: #f0f0f0;
+  --text-secondary: #a0a0b0;
+  --accent: #ff006e;
+  --accent-glow: #ff006e80;
+  --border: #2a2a3a;
+  --font-mono: 'JetBrains Mono', 'Source Code Pro', monospace;
+  --font-sans: 'Inter', 'Noto Sans KR', system-ui, sans-serif;
+  --grid-unit: 8px;
+  --spacing-md: 32px;
+  --spacing-lg: 64px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+.header {
+  border-bottom: 2px solid var(--border);
+  padding: var(--spacing-md) 0;
+  background: var(--bg-secondary);
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: var(--spacing-md);
+}
+.nav a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: color 0.2s;
+}
+.nav a:hover, .nav a.active {
+  color: var(--accent);
+}
+.hero {
+  padding: var(--spacing-lg) 0;
+  border-bottom: 2px solid var(--border);
+  text-align: center;
+}
+.hero h1 {
+  font-family: var(--font-mono);
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1.1;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--spacing-md);
+  text-shadow: 0 0 20px var(--accent-glow);
+}
+.hero .meta {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+.article-body {
+  padding: var(--spacing-lg) 0;
+  max-width: 780px;
+  margin: 0 auto;
+}
+.article-body h2 {
+  font-family: var(--font-mono);
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin: var(--spacing-md) 0 var(--grid-unit) 0;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
+.article-body p {
+  margin-bottom: var(--spacing-md);
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+}
+.article-body blockquote {
+  border-left: 4px solid var(--accent);
+  padding: var(--spacing-md) var(--spacing-md);
+  margin: var(--spacing-md) 0;
+  background: var(--bg-secondary);
+  font-style: italic;
+  color: var(--text-primary);
+}
+.article-body ul {
+  list-style: none;
+  margin: var(--spacing-md) 0;
+}
+.article-body ul li {
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: var(--grid-unit);
+  color: var(--text-secondary);
+}
+.article-body ul li::before {
+  content: '▶';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--spacing-md);
+  margin: var(--spacing-lg) 0;
+}
+.card {
+  background: var(--bg-secondary);
+  border: 2px solid var(--border);
+  padding: var(--spacing-md);
+  transition: border-color 0.2s, transform 0.2s;
+}
+.card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+}
+.card h3 {
+  font-family: var(--font-mono);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: var(--grid-unit);
+  color: var(--accent);
+}
+.card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+.footer {
+  border-top: 2px solid var(--border);
+  padding: var(--spacing-md) 0;
+  margin-top: var(--spacing-lg);
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+.footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+  .header .container {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+  .nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+}
+</style>
+</head>
+<body>
+<header class="header">
+<div class="container">
+<div class="logo">✦ 네온 보이드</div>
+<nav class="nav">
+<ul>
+<li><a href="/">홈</a></li>
+<li><a href="/intro">소개</a></li>
+<li><a href="/blog" class="active">블로그</a></li>
+<li><a href="/contact">연락처</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<main>
+<section class="hero">
+<div class="container">
+<h1>서버 웜업의 진짜<br>패러다임: 강남 셔츠룸</h1>
+<div class="meta">2025.02.20 · 마포 · 7분 읽음</div>
+</div>
+</section>
+
+<article class="article-body container">
+<h2>왜 냉정한 IT 전문가들이<br>강남 셔츠룸을 선택하는가</h2>
+<p>지금 당신의 서버는 식어가고 있다. 쿨링팬 소음 아래 숨죽인 지연 시간, 그 모든 기술적 완벽주의는 결국 사람이 만든다. 그리고 사람은 기계가 아니다. <strong>진정한 웜업은 콘솔 로그가 아닌, 사람의 체온에서 시작된다.</strong></p>
+
+<blockquote>“서버 웜업이라며 아침 7시에 출근해 모니터만 쳐다보는 당신. 진짜 성능 최적화는 밤 10시, 강남 골목에서 시작된다.”</blockquote>
+
+<p>우리는 그동안 잘못된 웜업 프랙티스에 매몰되어 있었다. 캐시 워밍, DB 프리로드, 스레드 풀 확장... 그 모든 기술이 빛을 보려면 결국 <strong>사람의 마음이 움직여야 한다.</strong> 마포의 스타트업 대표들, 판교의 시니어 엔지니어들은 이미 알고 있다. 진정한 성능 튜닝은 데이터센터 밖에서 일어난다는 것을.</p>
+
+<h2>전통적 웜업 vs 강남 셔츠룸 웜업</h2>
+<ul>
+<li><strong>오래된 방식:</strong> 커피를 마시며 대시보드 리프레시. 시간당 20건의 API 콜. 생산성 제로.</li>
+<li><strong>새로운 방식:</strong> 강남 셔츠룸에서의 넷 미팅. 업계 인사이트 교환. 거래 성사율 73% 상승.</li>
+<li><strong>당신의 선택:</strong> 지루한 모니터링 대신, 진짜 네트워크를 웜업하라.</li>
+</ul>
+
+<h2>3단계로 완성하는 서버 웜업 루틴</h2>
+<div class="card-grid">
+<div class="card">
+<h3>1. 오프라인 프리히트</h3>
+<p>강남 셔츠룸에서 첫 만남. 상대의 니즈를 읽는 것이 가장 빠른 프로토콜이다.</p>
+</div>
+<div class="card">
+<h3>2. 실시간 커넥션 풀</h3>
+<p>소주와 안주로 이어진 대화는 그 어떤 REST API보다 강력한 결속을 만든다.</p>
+</div>
+<div class="card">
+<h3>3. 캐시 인밸리데이션</h3>
+<p>불필요한 미팅은 버려라. 단 한 번의 셔츠룸 웜업으로 최적의 경로를 찾는다.</p>
+</div>
+</div>
+
+<p>이제 선택은 당신의 몫이다. 계속해서 죽은 서버 로그와 씨름할 것인가, 아니면 살아있는 네트워크 위에서 진짜 성능을 끌어낼 것인가. <strong>강남 셔츠룸은 단순한 유흥 공간이 아니다. 그것은 현대 IT 전사들의 비밀 전장이다.</strong></p>
+</article>
+</main>
+
+<footer class="footer">
+<div class="container">
+<p>© 2025 네온 보이드 · 브루탈리즘 디자인 시스템 · <a href="/privacy">프라이버시</a></p>
+</div>
+</footer>
+</body>
+</html>
