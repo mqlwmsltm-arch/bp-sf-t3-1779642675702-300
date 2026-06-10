@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-  <title><![CDATA[마포 강남 셔츠룸]]></title>
-  <link>https://sf-t3-1779642675702-300.pages.dev</link>
-  <description><![CDATA[마포 서버 웜업 관련 최신 뉴스, 서비스 안내, 리얼 후기 정보를 신속하게 전달하는 공식 RSS 피드입니다.]]></description>
-  <language>ko-KR</language>
-  <pubDate>Thu, 28 May 2026 12:52:17 GMT</pubDate>
-  <lastBuildDate>Thu, 28 May 2026 12:52:17 GMT</lastBuildDate>
-  <atom:link href="https://sf-t3-1779642675702-300.pages.dev/feed.xml" rel="self" type="application/rss+xml" />
+  <title><![CDATA[서버 웜업]]></title>
+  <link>https://mqlwmsltm-arch.github.io/bp-sf-t3-1779642675702-300</link>
+  <description><![CDATA[서버 웜업 - 강남 셔츠룸 관련 최신 소식 및 가이드]]></description>
+  <language>ko</language>
+  <pubDate>Wed, 10 Jun 2026 19:06:00 GMT</pubDate>
+  <lastBuildDate>Wed, 10 Jun 2026 19:06:00 GMT</lastBuildDate>
+  <atom:link href="https://mqlwmsltm-arch.github.io/bp-sf-t3-1779642675702-300/feed.xml" rel="self" type="application/rss+xml" />
   
     <item>
-      <title><![CDATA[마포 강남 셔츠룸 - 공식 홈페이지 오픈 안내]]></title>
-      <link>https://sf-t3-1779642675702-300.pages.dev/</link>
-      <guid isPermaLink="true">https://sf-t3-1779642675702-300.pages.dev/</guid>
-      <description><![CDATA[마포 서버 웜업 관련 최신 뉴스, 서비스 안내, 리얼 후기 정보를 신속하게 전달하는 공식 RSS 피드입니다.]]></description>
-      <pubDate>Thu, 28 May 2026 12:52:17 GMT</pubDate>
+      <title><![CDATA[강남 셔츠룸 경험자에게 물어본 현실적인 판단 기준]]></title>
+      <link>https://mqlwmsltm-arch.github.io/bp-sf-t3-1779642675702-300/posts/interview-001-1qcmxg6.html</link>
+      <guid isPermaLink="true">https://mqlwmsltm-arch.github.io/bp-sf-t3-1779642675702-300/posts/interview-001-1qcmxg6.html</guid>
+      <description><![CDATA[아, 진짜... 대기업 인사팀에서 사용하는 BARS 스케일 앵커 예시 작성 실무에 대한 노하우를 정리해 보았습니다. 이 글을 통해 여러분이 필요한 맥락과 구체적인 정보들을 얻어낼 수 있길 바랍니다. #### 1. 조건 검토의 중요성첫 번째로 중요한 점은 "앵커 예시"들]]></description>
+      <pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[강남 셔츠룸 관련 추천 정보 — 놓치면 후회할 꿀팁]]></title>
+      <link>https://mqlwmsltm-arch.github.io/bp-sf-t3-1779642675702-300/posts/t3link-002-1qcmxg6.html</link>
+      <guid isPermaLink="true">https://mqlwmsltm-arch.github.io/bp-sf-t3-1779642675702-300/posts/t3link-002-1qcmxg6.html</guid>
+      <description><![CDATA[## 포스트 메타정보 포스트 기획 테마: 강남 셔츠룸 관련 추천 정보 — 놓치면 후회할 꿀팁 백링크 지시: 본문 내러티브 속에서 다음 링크를 자연스러운 발견으로 녹여라: 등촌 코인노래방 할인 ### 포스트 내용 아, 진짜... ISA 계좌에서 해외 ETF TR 상품의 ]]></description>
+      <pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate>
     </item>
 </channel>
 </rss>
