@@ -3,189 +3,191 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="bpaas-design-system" content="brutalist-avantgarde">
-<meta name="bpaas-design-theme" content="kr-neon-void">
 <title>블로그 - 강남 셔츠룸 서버 웜업</title>
 <style>
 :root {
-  --bg-primary: #0a0a0f;
-  --bg-secondary: #12121c;
-  --text-primary: #f0f0f0;
-  --text-secondary: #a0a0b0;
-  --accent: #ff006e;
-  --accent-glow: #ff006e80;
-  --border: #2a2a3a;
-  --font-mono: 'JetBrains Mono', 'Source Code Pro', monospace;
-  --font-sans: 'Inter', 'Noto Sans KR', system-ui, sans-serif;
-  --grid-unit: 8px;
-  --spacing-md: 32px;
-  --spacing-lg: 64px;
+ --bg-primary: #0a0a0f;
+ --bg-secondary: #12121c;
+ --text-primary: #f0f0f0;
+ --text-secondary: #a0a0b0;
+ --accent: #ff006e;
+ --accent-glow: #ff006e80;
+ --border: #2a2a3a;
+ --font-mono: 'JetBrains Mono', 'Source Code Pro', monospace;
+ --font-sans: 'Inter', 'Noto Sans KR', system-ui, sans-serif;
+ --grid-unit: 8px;
+ --spacing-md: 32px;
+ --spacing-lg: 64px;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
-  background: var(--bg-primary);
-  color: var(--text-primary);
-  font-family: var(--font-sans);
-  line-height: 1.6;
-  min-height: 100vh;
+ background: var(--bg-primary);
+ color: var(--text-primary);
+ font-family: var(--font-sans);
+ line-height: 1.6;
+ min-height: 100vh;
 }
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 var(--spacing-md);
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 0 var(--spacing-md);
 }
 .header {
-  border-bottom: 2px solid var(--border);
-  padding: var(--spacing-md) 0;
-  background: var(--bg-secondary);
+ border-bottom: 2px solid var(--border);
+ padding: var(--spacing-md) 0;
+ background: var(--bg-secondary);
 }
 .header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
 }
 .logo {
-  font-family: var(--font-mono);
-  font-size: 1.5rem;
-  font-weight: 900;
-  color: var(--accent);
-  text-transform: uppercase;
-  letter-spacing: -0.02em;
+ font-family: var(--font-mono);
+ font-size: 1.5rem;
+ font-weight: 900;
+ color: var(--accent);
+ text-transform: uppercase;
+ letter-spacing: -0.02em;
 }
 .nav ul {
-  list-style: none;
-  display: flex;
-  gap: var(--spacing-md);
+ list-style: none;
+ display: flex;
+ gap: var(--spacing-md);
 }
 .nav a {
-  color: var(--text-secondary);
-  text-decoration: none;
-  font-size: 0.95rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  transition: color 0.2s;
+ color: var(--text-secondary);
+ text-decoration: none;
+ font-size: 0.95rem;
+ font-weight: 700;
+ text-transform: uppercase;
+ letter-spacing: 0.05em;
+ transition: color 0.2s;
 }
 .nav a:hover, .nav a.active {
-  color: var(--accent);
+ color: var(--accent);
 }
 .hero {
-  padding: var(--spacing-lg) 0;
-  border-bottom: 2px solid var(--border);
-  text-align: center;
+ padding: var(--spacing-lg) 0;
+ border-bottom: 2px solid var(--border);
+ text-align: center;
 }
 .hero h1 {
-  font-family: var(--font-mono);
-  font-size: 3rem;
-  font-weight: 900;
-  line-height: 1.1;
-  color: var(--text-primary);
-  text-transform: uppercase;
-  letter-spacing: -0.02em;
-  margin-bottom: var(--spacing-md);
-  text-shadow: 0 0 20px var(--accent-glow);
+ font-family: var(--font-mono);
+ font-size: 3rem;
+ font-weight: 900;
+ line-height: 1.1;
+ color: var(--text-primary);
+ text-transform: uppercase;
+ letter-spacing: -0.02em;
+ margin-bottom: var(--spacing-md);
+ text-shadow: 0 0 20px var(--accent-glow);
 }
 .hero .meta {
-  color: var(--text-secondary);
-  font-size: 0.9rem;
+ color: var(--text-secondary);
+ font-size: 0.9rem;
 }
 .article-body {
-  padding: var(--spacing-lg) 0;
-  max-width: 780px;
-  margin: 0 auto;
+ padding: var(--spacing-lg) 0;
+ max-width: 780px;
+ margin: 0 auto;
 }
 .article-body h2 {
-  font-family: var(--font-mono);
-  font-size: 1.75rem;
-  font-weight: 800;
-  margin: var(--spacing-md) 0 var(--grid-unit) 0;
-  color: var(--accent);
-  text-transform: uppercase;
-  letter-spacing: -0.01em;
+ font-family: var(--font-mono);
+ font-size: 1.75rem;
+ font-weight: 800;
+ margin: var(--spacing-md) 0 var(--grid-unit) 0;
+ color: var(--accent);
+ text-transform: uppercase;
+ letter-spacing: -0.01em;
 }
 .article-body p {
-  margin-bottom: var(--spacing-md);
-  color: var(--text-secondary);
-  font-size: 1.05rem;
+ margin-bottom: var(--spacing-md);
+ color: var(--text-secondary);
+ font-size: 1.05rem;
 }
 .article-body blockquote {
-  border-left: 4px solid var(--accent);
-  padding: var(--spacing-md) var(--spacing-md);
-  margin: var(--spacing-md) 0;
-  background: var(--bg-secondary);
-  font-style: italic;
-  color: var(--text-primary);
+ border-left: 4px solid var(--accent);
+ padding: var(--spacing-md) var(--spacing-md);
+ margin: var(--spacing-md) 0;
+ background: var(--bg-secondary);
+ font-style: italic;
+ color: var(--text-primary);
 }
 .article-body ul {
-  list-style: none;
-  margin: var(--spacing-md) 0;
+ list-style: none;
+ margin: var(--spacing-md) 0;
 }
 .article-body ul li {
-  padding-left: 1.5rem;
-  position: relative;
-  margin-bottom: var(--grid-unit);
-  color: var(--text-secondary);
+ padding-left: 1.5rem;
+ position: relative;
+ margin-bottom: var(--grid-unit);
+ color: var(--text-secondary);
 }
 .article-body ul li::before {
-  content: '▶';
-  position: absolute;
-  left: 0;
-  color: var(--accent);
+ content: '▶';
+ position: absolute;
+ left: 0;
+ color: var(--accent);
 }
 .card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: var(--spacing-md);
-  margin: var(--spacing-lg) 0;
+ display: grid;
+ grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+ gap: var(--spacing-md);
+ margin: var(--spacing-lg) 0;
 }
 .card {
-  background: var(--bg-secondary);
-  border: 2px solid var(--border);
-  padding: var(--spacing-md);
-  transition: border-color 0.2s, transform 0.2s;
+ background: var(--bg-secondary);
+ border: 2px solid var(--border);
+ padding: var(--spacing-md);
+ transition: border-color 0.2s, transform 0.2s;
 }
 .card:hover {
-  border-color: var(--accent);
-  transform: translateY(-4px);
+ border-color: var(--accent);
+ transform: translateY(-4px);
 }
 .card h3 {
-  font-family: var(--font-mono);
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin-bottom: var(--grid-unit);
-  color: var(--accent);
+ font-family: var(--font-mono);
+ font-size: 1.2rem;
+ font-weight: 700;
+ margin-bottom: var(--grid-unit);
+ color: var(--accent);
 }
 .card p {
-  color: var(--text-secondary);
-  font-size: 0.95rem;
+ color: var(--text-secondary);
+ font-size: 0.95rem;
 }
 .footer {
-  border-top: 2px solid var(--border);
-  padding: var(--spacing-md) 0;
-  margin-top: var(--spacing-lg);
-  text-align: center;
-  color: var(--text-secondary);
-  font-size: 0.85rem;
+ border-top: 2px solid var(--border);
+ padding: var(--spacing-md) 0;
+ margin-top: var(--spacing-lg);
+ text-align: center;
+ color: var(--text-secondary);
+ font-size: 0.85rem;
 }
 .footer a {
-  color: var(--accent);
-  text-decoration: none;
+ color: var(--accent);
+ text-decoration: none;
 }
 @media (max-width: 768px) {
-  .header .container {
-    flex-direction: column;
-    gap: var(--spacing-md);
-  }
-  .nav ul {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .hero h1 {
-    font-size: 2.2rem;
-  }
+ .header .container {
+ flex-direction: column;
+ gap: var(--spacing-md);
+ }
+ .nav ul {
+ flex-wrap: wrap;
+ justify-content: center;
+ }
+ .hero h1 {
+ font-size: 2.2rem;
+ }
 }
 </style>
-  <link rel="canonical" href="https://sf-t3-1779642675702-300.maphoshirts.today/blog.html">
+ <link rel="canonical" href="https://sf-t3-1779642675702-300.maphoshirts.today/blog.html">
+  <meta property="og:url" content="https://sf-t3-1779642675702-300.maphoshirts.today/blog.html">
+  <meta property="og:title" content="블로그 - 강남 셔츠룸 서버 웜업">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
 </head>
 <body>
 <header class="header">
@@ -216,7 +218,7 @@ body {
 
 <blockquote>“서버 웜업이라며 아침 7시에 출근해 모니터만 쳐다보는 당신. 진짜 성능 최적화는 밤 10시, 강남 골목에서 시작된다.”</blockquote>
 
-<p>우리는 그동안 잘못된 웜업 프랙티스에 매몰되어 있었다. 캐시 워밍, DB 프리로드, 스레드 풀 확장... 그 모든 기술이 빛을 보려면 결국 <strong>사람의 마음이 움직여야 한다.</strong> 마포의 스타트업 대표들, 판교의 시니어 엔지니어들은 이미 알고 있다. 진정한 성능 튜닝은 데이터센터 밖에서 일어난다는 것을.</p>
+<p>우리는 그동안 잘못된 웜업 프랙티스에 매몰되어 있었다. 캐시 워밍, DB 프리로드, 스레드 풀 확장.. 그 모든 기술이 빛을 보려면 결국 <strong>사람의 마음이 움직여야 한다.</strong> 마포의 스타트업 대표들, 판교의 시니어 엔지니어들은 이미 알고 있다. 진정한 성능 튜닝은 데이터센터 밖에서 일어난다는 것을.</p>
 
 <h2>전통적 웜업 vs 강남 셔츠룸 웜업</h2>
 <ul>
